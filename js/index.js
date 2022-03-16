@@ -193,7 +193,7 @@ function calcularInteres(numeroProducto, numeroCuotas){
 
 function calcularCuota(numeroProducto, numeroCuotas, interes){
 
-    let CuotaHTML = document.createElement("div");
+    let CuotaHtml = document.createElement("div");
 
     if (interes != -1 && interes != -2){
 
@@ -201,19 +201,19 @@ function calcularCuota(numeroProducto, numeroCuotas, interes){
 
         let valorCuota = (producto.precio / numeroCuotas) + ((producto.precio * interes) / 100);
 
-        CuotaHTML.innerHTML = `<h3>El valor de la cuota del producto ${producto.nombre} ${producto.marca} es ${valorCuota}.</h3>`;
+        CuotaHtml.innerHTML = `<h3>El valor de la cuota del producto ${producto.nombre} ${producto.marca} es ${valorCuota}.</h3>`;
 
     } else if (interes == -1){
 
-        CuotaHTML.innerHTML = "<h3>No esta disponible la cantidad de cuotas seleccionadas para este producto</h3>";
+        CuotaHtml.innerHTML = "<h3>No esta disponible la cantidad de cuotas seleccionadas para este producto</h3>";
         
     } else {
 
-        CuotaHTML.innerHTML = "<h3>El producto no esta disponible.</h3>";
+        CuotaHtml.innerHTML = "<h3>El producto no esta disponible.</h3>";
 
     }
 
-    document.body.append(CuotaHTML);
+    document.body.append(CuotaHtml);
 
 }
 
